@@ -1,0 +1,262 @@
+*
+{
+    margin:0;
+    box-sizing:border-box;
+    font-family:monospace;
+    padding:0%;
+}
+body
+{
+    margin-left: auto;
+    margin-right: auto;
+    color:black;
+    margin-top:60px;
+    overflow-y: hidden;
+    background-color: black;
+}
+.header
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:#222222;
+}
+.logo
+{
+    font-size:25px;
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+}
+.logo:hover,
+.logo:active{
+    color:magenta;
+}
+.About{
+    display:inline-block;
+    font-size:25px;
+    color:magenta;
+    text-decoration:none;
+    font-weight:600;
+    font-family:monospace;
+    padding:10px 15px;
+}
+.navbar
+{
+    position:relative;
+    display:inline-block;
+    font-size:25px;
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+    font-family:monospace;
+    padding:10px 15px;
+    transition:-3s;
+}
+.navbar::before
+{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:magenta;
+    z-index:-1;
+    transform:scaleX(0);
+    transform-origin:0;
+    transition:0.3s;
+}
+.navbar:hover::before
+{
+    transform:scaleX(1);
+}
+.section
+{
+    padding:10%;
+    background-color:black;
+    color:white;
+    font-size:24px;
+    display:flex;
+}
+.left
+{
+    float:left;
+    align-items:center;
+    border-radius:50%;
+    overflow: hidden;
+    border:2px solid magenta;
+    box-shadow: 15px 15px 15px rgba(211, 6, 204, 0.3);
+}
+.content
+{
+    float:right;
+    align-items:center;
+    margin-top:-430px;  
+    margin-left:400px;
+}
+.content h1
+{
+    color: magenta;
+}
+.content h3
+{
+    color:gray;
+}
+.button
+{
+    border-radius:20px;
+    padding:10px 20px;
+    margin-left:300px;
+    margin-top:40px;
+    background-color:rgb(190, 48, 190);
+    font-size:25px;
+    border:none;
+    box-shadow: 5px 5px 15px rgb(161, 73, 161);
+}
+.button a
+{
+    text-decoration:none;
+    color:whitesmoke;
+}
+@media only screen and (max-width:767px){
+    *
+    {
+        margin:0; 
+        box-sizing:border-box;
+        font-family:monospace;
+        padding:0%;
+    }
+    body
+    {
+        margin-left:auto;
+        margin-right:auto;
+        color:black;
+        background-color: black;
+        margin-top: -80px; 
+        margin-bottom: auto;
+    }
+    .header
+    {
+        position:fixed;
+        top:0; 
+        left:0;
+        width:100%;
+        padding:20px 10%;
+        padding-right: 2%; 
+        display:flex; 
+        justify-content:space-between;
+        align-items:center; 
+        background-color: #222222;
+    }
+    .logo
+    {
+        display: flex;
+        font-size:24px;
+        color:black;
+        text-decoration:none; 
+        font-weight:1000;
+    }
+    .logo:hover,
+    .logo:active {
+        color: magenta; 
+    }
+    .About {
+        display: inline-block;
+        font-size: 24px;
+        color: magenta;
+        text-decoration: none;
+        font-weight: 900;
+        font-family: monospace;
+        padding: 10px 10px; /* Adjusted padding */
+    }
+    .navbar {
+        display: flex;
+        align-items: end;
+        position: relative;
+        display:inline-block; 
+        font-size:24px;
+        color:black;
+        text-decoration:none;
+        font-weight:900; 
+        font-family:monospace;
+        padding: 10px 10px;
+        margin-left:-10px;
+        margin-right:-5px;
+        transition:-3s; 
+    }
+    .navbar.touch-hover {
+        touch-action: manipulation; /* Ensures touch events are not delayed */
+    }
+
+    .navbar.touch-hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: magenta;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: 0;
+        transition: transform 0.3s;
+    }
+
+    .navbar.touch-hover:hover::before {
+        transform: scaleX(1);
+    }
+    .section
+    {
+        padding:10%;
+        background-color:black;
+        color:white;
+        font-size:24px;
+        display:flex;
+    }
+    .left
+    {
+        margin-left:150px;
+        margin-top: 200px;
+        align-items:center;
+        border-radius:50%;
+        overflow: hidden;
+        border:2px solid magenta;
+        box-shadow: 15px 15px 15px rgba(211, 6, 204, 0.3);
+    }
+    .content
+    { 
+        margin-top:100px;
+        margin-left:-1px;
+        font-size:15px;
+    }
+    .content h1
+    {
+        color: magenta;
+    }
+    .content h3
+    {
+        color:gray;
+    }
+    .button
+    {
+        border-radius:20px;
+        padding:10px 20px;
+        margin-left:185px;
+        margin-top:100px;
+        background-color:rgb(190, 48, 190);
+        font-size:25px;
+        border:none;
+        box-shadow: 5px 5px 15px rgb(161, 73, 161);
+    }
+    .button a
+    {
+        text-decoration:none;
+        color:whitesmoke;
+    }
+}
